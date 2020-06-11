@@ -1,0 +1,69 @@
+------------------------------------------
+@Autowired
+private R repository;
+
+------------------------------------------
+List<M> lista = new ArrayList<>();
+		for(E a : ((List<E>)repository.findAll()).stream().filter(x->x.getVisible()!=0).collect(Collectors.toList())) {
+			lista.add(new M(a));
+		}
+		return lista;
+------------------------------------------
+try {
+			M m = null;
+			for(M a : lista().stream().filter(x->x.getId()==id).collect(Collectors.toList())) {
+				m= a;
+			}
+			return m;
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			return null;
+		}
+------------------------------------------
+try {
+			repository.save(invertir(t));
+			return "Cargo registrado correctamente";
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			return null;
+		}
+------------------------------------------
+try {
+			repository.save(invertir(t));
+			return "Cargo actualizado correctamente";
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			return null;
+		}
+------------------------------------------
+try {
+			E eliminar = invertir(t);
+			eliminar.setVisible(0);
+			repository.save(eliminar);
+			return "Cargo eliminado correctamente";
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			return null;
+		}
+------------------------------------------
+public E invertir(M m) {
+		return new E(
+				
+				);
+	}
+---------------------------------------------
+{
+"id": 1,
+"tienda": "sjl",
+"telefono": 123,
+"direccion": "direction",
+"email": "gmail",
+"visible": 1,
+"idDistrito": 1
+}
+----------------------------------------
+{
+"id": 1,
+"nombre": "sjl",
+"visible": 1
+}
