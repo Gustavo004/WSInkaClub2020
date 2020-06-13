@@ -3,6 +3,7 @@ package pe.edu.idat.slogistica.model;
 import pe.edu.idat.slogistica.entity.Cargo;
 
 public class MCargo {
+
 	private int id;
 	private String cargo;
 	private int visible;
