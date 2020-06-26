@@ -33,13 +33,15 @@ public class Cliente implements Serializable{
 	private int visible;
 	@JoinColumn(name ="distrito" , referencedColumnName = "id")
 	@ManyToOne(optional = false)
-	private Distrito distrito;
+	private Distrito distrito;		
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
 	private List<Trabajador> listaTrabajador;
+	
 	public Cliente() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public Cliente(int id, String tienda, int telefono, String direccion, String email, int visible,
 			Distrito distrito) {
 		super();
@@ -50,19 +52,7 @@ public class Cliente implements Serializable{
 		this.email = email;
 		this.visible = visible;
 		this.distrito = distrito;
-	}
-	public Cliente(int id, String tienda, int telefono, String direccion, String email, int visible, Distrito distrito,
-			List<Trabajador> listaTrabajador) {
-		super();
-		this.id = id;
-		this.tienda = tienda;
-		this.telefono = telefono;
-		this.direccion = direccion;
-		this.email = email;
-		this.visible = visible;
-		this.distrito = distrito;
-		this.listaTrabajador = listaTrabajador;
-	}
+	}	
 	public int getId() {
 		return id;
 	}
@@ -104,12 +94,6 @@ public class Cliente implements Serializable{
 	}
 	public void setDistrito(Distrito distrito) {
 		this.distrito = distrito;
-	}
-	public List<Trabajador> getListaTrabajador() {
-		return listaTrabajador;
-	}
-	public void setListaTrabajador(List<Trabajador> listaTrabajador) {
-		this.listaTrabajador = listaTrabajador;
 	}
 	
 }

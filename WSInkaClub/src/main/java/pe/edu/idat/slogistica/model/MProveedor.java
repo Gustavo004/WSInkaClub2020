@@ -4,7 +4,7 @@ import pe.edu.idat.slogistica.entity.Proveedor;
 
 public class MProveedor {
 	private int id;
-	private int ruc;
+	private String ruc;
 	private String rSocial;
 	private int cFacturacion;
 	private String iContrato;
@@ -34,7 +34,7 @@ public class MProveedor {
 		this.visible = proveedor.getVisible();
 		this.idDistrito = proveedor.getDistrito().getId();
 	}
-	public MProveedor(int id, int ruc, String rSocial, int cFacturacion, String iContrato, String fContrato,
+	public MProveedor(int id, String ruc, String rSocial, int cFacturacion, String iContrato, String fContrato,
 			String telefono, String direccion, String email, String representante, int visible, int distrito) {
 		super();
 		this.id = id;
@@ -56,10 +56,10 @@ public class MProveedor {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getRuc() {
+	public String getRuc() {
 		return ruc;
 	}
-	public void setRuc(int ruc) {
+	public void setRuc(String ruc) {
 		this.ruc = ruc;
 	}
 	public String getrSocial() {

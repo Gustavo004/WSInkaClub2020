@@ -35,13 +35,6 @@ public class Categoria implements Serializable {
 		this.nombre = nombre;
 		this.visible = visible;
 	}
-	public Categoria(int id, String nombre, int visible, List<Producto> listaProducto) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.visible = visible;
-		this.listaProducto = listaProducto;
-	}
 	public int getId() {
 		return id;
 	}
@@ -59,12 +52,6 @@ public class Categoria implements Serializable {
 	}
 	public void setVisible(int visible) {
 		this.visible = visible;
-	}
-	public List<Producto> getListaProducto() {
-		return listaProducto;
-	}
-	public void setListaProducto(List<Producto> listaProducto) {
-		this.listaProducto = listaProducto;
 	}
 	
 }

@@ -38,14 +38,7 @@ public class Cargo implements Serializable{
 		this.id = id;
 		this.cargo = cargo;
 		this.visible = visible;
-	}
-	public Cargo(int id, String cargo, int visible, List<Trabajador> listaTrabajador) {
-		super();
-		this.id = id;
-		this.cargo = cargo;
-		this.visible = visible;
-		this.listaTrabajador = listaTrabajador;
-	}
+	}	
 	public int getId() {
 		return id;
 	}
@@ -63,12 +56,6 @@ public class Cargo implements Serializable{
 	}
 	public void setVisible(int visible) {
 		this.visible = visible;
-	}
-	public List<Trabajador> getListaTrabajador() {
-		return listaTrabajador;
-	}
-	public void setListaTrabajador(List<Trabajador> listaTrabajador) {
-		this.listaTrabajador = listaTrabajador;
-	}
+	}	
 	
 }

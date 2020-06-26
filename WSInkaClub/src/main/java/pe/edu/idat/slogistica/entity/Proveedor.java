@@ -19,7 +19,7 @@ public class Proveedor implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	@Column(name="ruc")
-	private int ruc;
+	private String ruc;
 	@Column(name="rSocial")
 	private String rSocial;
 	@Column(name="cFacturacion")
@@ -45,7 +45,7 @@ public class Proveedor implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Proveedor(int id, int ruc, String rSocial, int cFacturacion, String iContrato, String fContrato,
+	public Proveedor(int id, String ruc, String rSocial, int cFacturacion, String iContrato, String fContrato,
 			String telefono, String direccion, String email, String representante, int visible, Distrito distrito) {
 		super();
 		this.id = id;
@@ -67,10 +67,10 @@ public class Proveedor implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getRuc() {
+	public String getRuc() {
 		return ruc;
 	}
-	public void setRuc(int ruc) {
+	public void setRuc(String ruc) {
 		this.ruc = ruc;
 	}
 	public String getrSocial() {

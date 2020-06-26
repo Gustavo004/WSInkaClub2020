@@ -1,0 +1,89 @@
+---------------------------------------------
+----------------------------------------
+-El uso del id en los cuerpos json es solo para las peticios put, no post ni delete
+---Distrito - http://localhost:9090/slogistica/distritos
+{
+"id": 1,
+"nombre": "sjl",
+"visible": 1
+}
+---Cargo - http://localhost:9090/slogistica/cargos
+{
+"id": 1,
+"nombre": "Administrador",
+"visible": 1
+}
+---Categoria - http://localhost:9090/slogistica/categorias
+{
+"id": 1,
+"nombre": "Lacteos",
+"visible": 1
+}
+---Marca - http://localhost:9090/slogistica/marcas
+{
+"id": 1,
+"nombre": "Gloria",
+"visible": 1
+}
+---TipoCarga - http://localhost:9090/slogistica/tipocargas
+{
+"id": 1,
+"nombre": "Congelados",
+"visible": 1
+}
+---Cliente - http://localhost:9090/slogistica/clientes
+{
+"id": 1,
+"tienda": "Tiena SJL",
+"telefono": 123,
+"direccion": "direction",
+"email": "tiendas.sjl@inkaclub.com",
+"visible": 1,
+"idDistrito": 1
+}
+---Proveedor - http://localhost:9090/slogistica/proveedores
+{
+"id": 1,
+"ruc": "65432165743",
+"rSocial": "Gloria SA",
+"cFacturacion": 20,
+"iContrato": "15/04/2019",
+"fContrato": "15/04/2020",
+"telefono": "7654321",
+"direccion": "AV Nicolas de Piero #345",
+"email": "representaciones.gloria@gloria.com",
+"representante": "Luis Antonio Marquez",
+"visible": 1,
+"idDistrito": 1
+}
+-validar que los idcargo,iddistrito y idcliente sean los correctos haciendo un get
+---Trabajador - http://localhost:9090/slogistica/trabajadores
+ {
+"id": 1,
+"nombres": "Christian",
+"apellidos": "Gonzales",
+"fNacimiento": "09/09/1998",
+"tDocumento": "DNI",
+"nDocumento": 51345643,
+"sexo": "M",
+"eCivil": "V",
+"telefono": "928765433",
+"email": "christian.gonzales@gmail.com",
+"direccion": "DIRECCION",
+"fRegistro": "02/01/2019",
+"login": "gcristian",
+"clave": "51345643",
+"visible": 1,
+"idCargo": 2,
+"idDistrito": 1,
+"idCliente": 6
+}
+
+---Producto - http://localhost:9090/slogistica/productos
+{
+"id": 1,
+"nombre": "Leche Entera",
+"visible": 1,
+"idCategoria": 3,
+"idTipocarga": 5
+}

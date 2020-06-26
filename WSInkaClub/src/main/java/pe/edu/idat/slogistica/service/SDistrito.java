@@ -43,6 +43,7 @@ public class SDistrito implements ServicesCRUD<MDistrito> {
 	public String registrar(MDistrito t) {
 		try {
 			repository.save(invertir(t));
+		
 			return "Distrito registrado correctamente";
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
@@ -66,13 +67,14 @@ public class SDistrito implements ServicesCRUD<MDistrito> {
 		try {
 			Distrito eliminar = invertir(t);
 			eliminar.setVisible(0);
-			repository.save(eliminar);
+			repository.save(eliminar);		
 			return "Distrito eliminado correctamente";
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 			return null;
 		}
 	}
+	
 	public Distrito invertir(MDistrito distrito) {
 		return new Distrito(
 				distrito.getId(),

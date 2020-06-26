@@ -25,11 +25,12 @@ public class Distrito implements Serializable{
 	@Column(name="visible")
 	private int visible;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "distrito")
-	private List<Cliente> listaCliente;
+	private List<Cliente> listaCliente;	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "distrito")
 	private List<Proveedor> listaProveedor;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "distrito")
 	private List<Trabajador> listaTrabajador;
+	
 	public Distrito() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -40,16 +41,7 @@ public class Distrito implements Serializable{
 		this.nombre = nombre;
 		this.visible = visible;
 	}
-	public Distrito(int id, String nombre, int visible, List<Cliente> listaCliente, List<Proveedor> listaProveedor,
-			List<Trabajador> listaTrabajador) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.visible = visible;
-		this.listaCliente = listaCliente;
-		this.listaProveedor = listaProveedor;
-		this.listaTrabajador = listaTrabajador;
-	}
+	
 	public int getId() {
 		return id;
 	}
@@ -67,24 +59,6 @@ public class Distrito implements Serializable{
 	}
 	public void setVisible(int visible) {
 		this.visible = visible;
-	}
-	public List<Cliente> getListaCliente() {
-		return listaCliente;
-	}
-	public void setListaCliente(List<Cliente> listaCliente) {
-		this.listaCliente = listaCliente;
-	}
-	public List<Proveedor> getListaProveedor() {
-		return listaProveedor;
-	}
-	public void setListaProveedor(List<Proveedor> listaProveedor) {
-		this.listaProveedor = listaProveedor;
-	}
-	public List<Trabajador> getListaTrabajador() {
-		return listaTrabajador;
-	}
-	public void setListaTrabajador(List<Trabajador> listaTrabajador) {
-		this.listaTrabajador = listaTrabajador;
 	}
 	
 }

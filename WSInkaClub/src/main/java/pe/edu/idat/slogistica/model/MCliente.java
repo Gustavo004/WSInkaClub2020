@@ -9,7 +9,7 @@ public class MCliente {
 	private String direccion;
 	private String email;
 	private int visible;
-	private int idDistrito;
+	private int idDistrito;	
 	public MCliente() {
 		super();
 		// TODO Auto-generated constructor stub
