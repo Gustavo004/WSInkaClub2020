@@ -1,4 +1,5 @@
 ---------------------------------------------
+Aqui poner los json de prueba que realizan.
 ----------------------------------------
 -El uso del id en los cuerpos json es solo para las peticios put, no post ni delete
 ---Distrito - http://localhost:9090/slogistica/distritos
@@ -87,3 +88,4 @@
 "idCategoria": 3,
 "idTipocarga": 5
 }
+-------------------------------------------
