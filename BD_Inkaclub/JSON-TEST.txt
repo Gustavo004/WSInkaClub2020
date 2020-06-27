@@ -89,3 +89,45 @@ Aqui poner los json de prueba que realizan.
 "idTipocarga": 5
 }
 -------------------------------------------
+----Factura - http://localhost:9090/slogistica/facturas
+
+ {
+"id": 1,
+"ruc": "75842365789",
+"rSocial": "PANIFICADORA BIMBO DEL PERU S.A",
+"fRegistro": "09/09/1998",
+"subtotal": 563,
+"igv": 101.3,
+"total": 664.3,
+"estado": 1,
+"visible": 1,
+"idTrabajador": 8
+}
+------------Guia de Remision - http://localhost:9090/slogistica/guiaremision
+{
+"id": 1,
+"fRegistro": "09/09/1998",
+"pPartida": "CENTRAL",
+"pLlegada": "SUPERMARCADO WIESSE",
+"motivo": "ORDEN DE PEDIDO 10001",
+"dniTransportista": "48273612",
+"nTransportista": "IVAN RAMOS BRICEÑO",
+"licencia": "Q48273612",
+"placa": "ASD-321",
+"marca": "TOYOTA",
+"visible" : 1,
+"idFactura": 9
+}
+
+--------Inventario - http://localhost:9090/slogistica/inventarios
+
+ {
+"id": 1,
+"lugar": "CENTRAL",
+"motivo": "Traslado",
+"fFisica": "22/06/2020",
+"fModificacion": "26/06/2020",
+"estado": 1,
+"visible" : 1,
+"idTrabajador": 8
+}

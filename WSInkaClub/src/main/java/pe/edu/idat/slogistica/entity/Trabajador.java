@@ -1,7 +1,9 @@
 package pe.edu.idat.slogistica.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -55,6 +58,10 @@ public class Trabajador implements Serializable{
 	@JoinColumn(name ="cliente" , referencedColumnName = "id")
 	@ManyToOne(optional = false)
 	private Cliente cliente;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "trabajador")
+	private List<Factura> listaFactura;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "trabajador")
+	private List<Inventario> listaInvenatario;
 	
 	public Trabajador() {
 		super();
